@@ -5,11 +5,12 @@
 class Die
 {
 private:
-    const int SIDES = 6;
+    static const int SIDES = 6;
+    int sides;
 
 public:
     Die();
-    Die(int sides);
-    int roll();
+    Die(int s);
+    int roll() const;
     friend std::ostream &operator<<(std::ostream &strm, const Die &obj);
 };
